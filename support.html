@@ -45,20 +45,44 @@
             margin-bottom: 8px;
         }
         .content .subtitle { color: var(--text-light); font-size: 1.1em; margin-bottom: 48px; }
-        
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr; } }
         .contact-card {
             background: white;
             border-radius: 16px;
-            padding: 32px;
+            padding: 28px;
             border: 1px solid rgba(155, 184, 158, 0.15);
-            margin-bottom: 32px;
             text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s;
         }
+        .contact-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); transform: translateY(-2px); }
         .contact-card .icon { font-size: 2em; margin-bottom: 12px; }
-        .contact-card h3 { font-size: 1.1em; margin-bottom: 8px; }
-        .contact-card p { color: var(--text-light); line-height: 1.6; }
-        .contact-card a { color: var(--sage-dark); font-weight: 600; text-decoration: none; }
-        .contact-card a:hover { text-decoration: underline; }
+        .contact-card h3 { font-size: 1.05em; margin-bottom: 8px; }
+        .contact-card p { color: var(--text-light); line-height: 1.5; font-size: 0.9em; margin-bottom: 12px; }
+        .contact-card .btn {
+            display: inline-block;
+            background: var(--sage-dark);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: background 0.2s;
+        }
+        .contact-card .btn:hover { background: #6A8E6D; }
+        .contact-card .btn.secondary {
+            background: transparent;
+            color: var(--sage-dark);
+            border: 1.5px solid var(--sage-dark);
+        }
+        .contact-card .btn.secondary:hover { background: rgba(155, 184, 158, 0.1); }
 
         .faq { margin-top: 48px; }
         .faq h2 {
@@ -75,6 +99,8 @@
         }
         .faq-item h3 { font-size: 1em; font-weight: 600; margin-bottom: 8px; color: var(--text); }
         .faq-item p { color: var(--text-light); line-height: 1.6; font-size: 0.95em; }
+        .faq-item a { color: var(--sage-dark); text-decoration: none; }
+        .faq-item a:hover { text-decoration: underline; }
 
         footer {
             text-align: center;
@@ -88,10 +114,10 @@
 </head>
 <body>
     <nav>
-        <a class="logo" href="/">Songs of Scripture</a>
+        <a class="logo" href="index.html">Songs of Scripture</a>
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/privacy.html">Privacy</a>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
         </div>
     </nav>
 
@@ -99,11 +125,19 @@
         <h1>Support</h1>
         <p class="subtitle">We're here to help you get the most out of Songs of Scripture.</p>
 
-        <div class="contact-card">
-            <div class="icon">✉️</div>
-            <h3>Get in Touch</h3>
-            <p>For questions, feedback, bug reports, or data deletion requests:</p>
-            <p style="margin-top: 12px;"><a href="mailto:support@songsofscripture.com">support@songsofscripture.com</a></p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">📋</div>
+                <h3>Feedback Form</h3>
+                <p>Bug reports, feature requests, song suggestions, or general feedback.</p>
+                <a class="btn" href="https://forms.gle/PLACEHOLDER" target="_blank">Open Form</a>
+            </div>
+            <div class="contact-card">
+                <div class="icon">💬</div>
+                <h3>GitHub Issues</h3>
+                <p>Report bugs or request features publicly. Great for technical issues.</p>
+                <a class="btn secondary" href="https://github.com/annariley/songs-of-scripture-support/issues" target="_blank">Open Issue</a>
+            </div>
         </div>
 
         <div class="faq">
@@ -131,23 +165,23 @@
 
             <div class="faq-item">
                 <h3>Can I suggest a song to add?</h3>
-                <p>Yes! Email us at support@songsofscripture.com with the song name, artist, and which passage it relates to. We review all suggestions.</p>
+                <p>Yes! Use the feedback form above with the song name, artist, and which passage it relates to. We review all suggestions.</p>
             </div>
 
             <div class="faq-item">
                 <h3>How do I delete my data?</h3>
-                <p>Email support@songsofscripture.com and we'll delete all data associated with your account within 48 hours.</p>
+                <p>Submit a request through the feedback form or <a href="https://github.com/annariley/songs-of-scripture-support/issues">open an issue</a>. We'll delete all data associated with your account within 48 hours.</p>
             </div>
 
             <div class="faq-item">
                 <h3>Why can't I hear full songs?</h3>
-                <p>We show 30-second previews when available. For full playback, tap "Open in Spotify" to listen in the Spotify app. A Spotify Premium account is not required for previews.</p>
+                <p>We show 30-second previews when available. For full playback, tap "Open in Spotify" to listen in the Spotify app.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <a href="/">← Back to Home</a> &nbsp;·&nbsp; © 2026 Anna Riley
+        <a href="index.html">← Back to Home</a> &nbsp;·&nbsp; © 2026 Anna Riley
     </footer>
 </body>
 </html>
