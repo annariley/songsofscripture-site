@@ -3,24 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songs of Scripture - Support</title>
+    <title>Support — Songs of Scripture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-        h1 { color: #2c5530; }
-        h2 { color: #4a7c4f; }
+        :root {
+            --sage: #9BB89E;
+            --sage-dark: #7A9E7D;
+            --terracotta: #CD8068;
+            --lavender: #B3A8CF;
+            --cream: #FBF9F5;
+            --text: #2C2C2C;
+            --text-light: #6B6B6B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); background: var(--cream); }
+        nav {
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(155, 184, 158, 0.2);
+        }
+        nav .logo { font-family: 'DM Serif Display', serif; font-size: 1.3em; color: var(--sage-dark); text-decoration: none; }
+        nav .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+        nav .nav-links a:hover { color: var(--sage-dark); }
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+        .content h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.4em;
+            margin-bottom: 8px;
+        }
+        .content .subtitle { color: var(--text-light); font-size: 1.1em; margin-bottom: 48px; }
+        
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid rgba(155, 184, 158, 0.15);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .contact-card .icon { font-size: 2em; margin-bottom: 12px; }
+        .contact-card h3 { font-size: 1.1em; margin-bottom: 8px; }
+        .contact-card p { color: var(--text-light); line-height: 1.6; }
+        .contact-card a { color: var(--sage-dark); font-weight: 600; text-decoration: none; }
+        .contact-card a:hover { text-decoration: underline; }
+
+        .faq { margin-top: 48px; }
+        .faq h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8em;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(155, 184, 158, 0.12);
+        }
+        .faq-item h3 { font-size: 1em; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+        .faq-item p { color: var(--text-light); line-height: 1.6; font-size: 0.95em; }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--text-light);
+            font-size: 0.9em;
+            border-top: 1px solid rgba(155, 184, 158, 0.15);
+        }
+        footer a { color: var(--sage-dark); text-decoration: none; }
     </style>
 </head>
 <body>
-    <h1>Songs of Scripture - Support</h1>
-    <h2>Need Help?</h2>
-    <p>For questions, feedback, or issues with Songs of Scripture, please contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:support@songsofscripture.com">support@songsofscripture.com</a></p>
-    <h2>FAQ</h2>
-    <h3>Do I need a Spotify account?</h3>
-    <p>A free or premium Spotify account is required to use music features (search, save, and play songs). You can browse Scripture without an account using Guest mode.</p>
-    <h3>How do I disconnect my Spotify account?</h3>
-    <p>Go to your Profile tab and tap "Sign Out." You can also revoke access from your Spotify account settings at spotify.com.</p>
-    <h3>How do I delete my data?</h3>
-    <p>Contact us at support@songsofscripture.com and we will delete all data associated with your account.</p>
+    <nav>
+        <a class="logo" href="/">Songs of Scripture</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/privacy.html">Privacy</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Support</h1>
+        <p class="subtitle">We're here to help you get the most out of Songs of Scripture.</p>
+
+        <div class="contact-card">
+            <div class="icon">✉️</div>
+            <h3>Get in Touch</h3>
+            <p>For questions, feedback, bug reports, or data deletion requests:</p>
+            <p style="margin-top: 12px;"><a href="mailto:support@songsofscripture.com">support@songsofscripture.com</a></p>
+        </div>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Do I need a Spotify account?</h3>
+                <p>A free or premium Spotify account is needed for music features (search, save, and play songs). You can browse Scripture without an account using Guest mode.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I save a song to my Spotify library?</h3>
+                <p>Tap the heart icon on any song card. You'll need to be signed in with your Spotify account. The song will appear in your Liked Songs on Spotify.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I disconnect my Spotify account?</h3>
+                <p>Go to your Profile tab and tap "Sign Out." You can also revoke access from your Spotify account settings at <a href="https://www.spotify.com/account/apps/">spotify.com/account/apps</a>.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What Bible translation is used?</h3>
+                <p>We use the World English Bible (WEB), a modern public domain translation that's readable and freely distributable.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I suggest a song to add?</h3>
+                <p>Yes! Email us at support@songsofscripture.com with the song name, artist, and which passage it relates to. We review all suggestions.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I delete my data?</h3>
+                <p>Email support@songsofscripture.com and we'll delete all data associated with your account within 48 hours.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why can't I hear full songs?</h3>
+                <p>We show 30-second previews when available. For full playback, tap "Open in Spotify" to listen in the Spotify app. A Spotify Premium account is not required for previews.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="/">← Back to Home</a> &nbsp;·&nbsp; © 2026 Anna Riley
+    </footer>
 </body>
 </html>
